@@ -7,3 +7,27 @@ body {
 h1 {
 margin: 30px;
 }
+
+ul{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.boxes {
+    display: flex;
+}
+
+li {
+    display: grid;
+    place-items: center;
+    list-style: none;
+    font-size: 0px;
+}
+
+.square {
+    height: 50px;
+    width: 50px;
+    margin: 1px;
+}
+
+
