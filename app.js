@@ -1,14 +1,10 @@
-
-
-
-
 // insert images
 function insertImage() {
 
     document.querySelectorAll('.box').forEach(image => {
 
         if (image.innerText.length !== 0) {
-            if (image.innerText == 'Bpawn' || image.innerText == 'Wpawn') {
+            if (image.innerText === 'Bpawn' || image.innerText === 'Wpawn') {
                 image.innerHTML = `${image.innerText} <img class='allimg allpawn' src="${image.innerText}.png" alt="">`
                 image.style.cursor = 'pointer'
 
@@ -47,3 +43,31 @@ function coloring() {
     })
 } 
 coloring()
+
+// function to remove opposing team pieces 
+
+
+
+// function to see available paths 
+
+
+
+// King Piece
+
+// Queen Piece
+
+// Rook Piece 
+
+// Knight Piece 
+
+// Bishop Piece 
+
+
+
+
+// Pawn Piece
+
+
+
+
+// Who's Turn?
