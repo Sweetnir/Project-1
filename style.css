@@ -9,8 +9,8 @@ body {
 }
 
 #board {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     background-color: rgb(111, 143, 175);
     /*rgb(137, 207, 240)*/
     display: flex;
@@ -19,9 +19,51 @@ body {
 }
 
 .square {
-    width: 200px;
+    width:200px;
     height: 200px;
     background-color: white;
-    border: solid 2px black;
+    border: solid 5px black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.circle {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    border: 25px solid red;
     box-sizing: border-box;
 }
+
+.X {
+    height: 175px;
+    width: 175px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.X:before, .X:after {
+    content: "";
+    position: absolute;
+    background-color: blue;
+}
+
+.X:before {
+    left: 50%;
+    width: 30%;
+    height: 100%;
+    margin-left: -15%;
+
+}
+
+.X:after{
+    top: 50%;
+    width: 100%;
+    height: 30%;
+    margin-top: -15%;
+
+}
+
