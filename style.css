@@ -6,22 +6,22 @@ body {
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    background-color: rgb(111, 143, 175);
 }
 
 #board {
     width: 600px;
     height: 600px;
-    background-color: rgb(111, 143, 175);
+    background-color: rgb(137, 207, 240);
     /*rgb(137, 207, 240)*/
     display: flex;
     flex-wrap: wrap;
     border: solid 5px black;
 }
 
-.square {
+.box {
     width:200px;
     height: 200px;
-    background-color: white;
     border: solid 5px black;
     box-sizing: border-box;
     display: flex;
