@@ -9,8 +9,8 @@ window.addEventListener('DOMContentLoaded', () => {
     let currentPlayer = 'X';
     let onGoing = true;
 
-    const PLAYERX_WON = 'PLAYERX_WON';
-    const PLAYERO_WON = 'PLAYERO_WON';
+    const PLAYERX_WON = 'X_WON';
+    const PLAYERO_WON = 'O_WON';
     const TIE = 'TIE';
 
 
