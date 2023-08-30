@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 announcer.innerHTML = ' <span class="playerX">X</span> Won !';
                 break;
             case TIE:
-                announcer.innerText = 'Its a tie';
+                announcer.innerText = 'It is a tie';
         }
         announcer.classList.remove('hide');
     };

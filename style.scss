@@ -1,0 +1,109 @@
+// _variables.scss
+$primary-color: #0041b3;
+$secondary-color: #f30031;
+$background-color: #817b7b;
+$max-box-width: 300px;
+$button-padding: 8px;
+$button-font-size: 20px;
+
+// _mixins.scss
+@mixin button-style($background-color) {
+  color: rgb(5, 5, 5);
+  padding: $button-padding;
+  border-radius: 8px;
+  border: none;
+  font-size: $button-font-size;
+  margin-left: 1em;
+  cursor: pointer;
+  background-color: $background-color;
+}
+
+@mixin player-style($color) {
+  color: $color;
+}
+
+// _functions.scss
+@function calculate-grid-columns($columns) {
+  @return repeat($columns, 1fr);
+}
+
+@function safe-divide($numerator, $denominator) {
+  @if $denominator == 0 {
+    @error "Cannot divide by zero.";
+  }
+  @return $numerator / $denominator;
+}
+
+// main.scss
+@import "variables";
+@import "mixins";
+@import "functions";
+
+.background {
+  background-color: $background-color;
+  height: 100vh;
+  padding-top: 1px;
+
+  .title {
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  h1 {
+    font-size: 70px;
+  }
+
+  .display {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .container {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: calculate-grid-columns(3);
+    grid-template-rows: calculate-grid-columns(3);
+    max-width: $max-box-width;
+
+    .box {
+      border: 2px solid rgb(28, 36, 73);
+      min-width: 100px;
+      min-height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 50px;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      &.#{$player} {
+        @include player-style($primary-color);
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+
+    button.restart {
+      @include button-style($secondary-color);
+    }
+
+    button.reset {
+      @include button-style($primary-color);
+    }
+  }
+}
